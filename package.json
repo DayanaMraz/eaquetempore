@@ -1,0 +1,26 @@
+{
+  "engines": {
+    "pnpm": ">=8.6.5"
+  },
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "watch": "turbo run --filter './packages/*' --parallel watch",
+    "dev:wagmi": "turbo run --filter './examples/wagmi/react' dev",
+    "dev:w3vm": "turbo run --filter './examples/w3vm/react' dev",
+    "build": "turbo run build",
+    "format": "pnpm run --filter './packages/*' format",
+    "build:packages": "turbo run --filter './packages/*' build",
+    "upload:packages": "turbo run --filter './packages/*' upload",
+    "clean": "turbo run --filter './packages/*' upload"
+  },
+  "devDependencies": {
+    "turbo": "^1.10.15"
+  },
+  "name": "eaquetempore",
+  "author": "SabinaHickle",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DayanaMraz/eaquetempore.git"
+  },
+  "version": "1.0.0"
+}
